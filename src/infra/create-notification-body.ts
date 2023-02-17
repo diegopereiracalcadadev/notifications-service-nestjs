@@ -3,9 +3,9 @@ import { IsNotEmpty, IsUUID } from 'class-validator';
 export class CreateNotificationBody {
   @IsNotEmpty()
   @IsUUID()
-  recipientId: string;
+  recipientId!: string;
 
-  content: string;
+  content!: string;
 
-  category: string;
+  category!: string;
 }
