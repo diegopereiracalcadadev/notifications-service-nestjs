@@ -1,6 +1,5 @@
-import { PrismaNotificationMapper } from '@infra/database/prisma/mappers/prisma-notification-mapper';
+import { SendNotification } from '@app/use-cases/send-notification';
 import { Body, Controller, Post } from '@nestjs/common';
-import { SendNotification } from 'src/application/entities/use-cases/send-notification';
 import { CreateNotificationBody } from '../dtos/create-notification-body';
 import { NotificationViewModel } from '../viewModels/notification-view-model';
 
