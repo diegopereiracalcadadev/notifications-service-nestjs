@@ -26,6 +26,12 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Running Migrations (Prisma)
+
+```bash
+$ npx prisma migrate dev
+```
+
 ## DB IDE (Prisma Studio)
 
 ```bash
@@ -43,6 +49,12 @@ $ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
+```
+
+## Verifi TS errors
+
+```bash
+$ npx tsc --noEmit 
 ```
 
 ## License
