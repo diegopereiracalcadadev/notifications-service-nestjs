@@ -24,4 +24,12 @@ export class PrismaNotificationRepository implements NotificationsRepository {
   async save(notification: Notification): Promise<void> {
     throw new Error('Method not implemented.');
   }
+
+  async count(recipientId: number): Promise<number> {
+    return this.prismaService.notification.count(
+      { where: {
+        item.recipientId === recipientId
+      }}
+    );
+  }
 }

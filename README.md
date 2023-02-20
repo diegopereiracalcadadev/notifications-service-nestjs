@@ -51,7 +51,7 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Verifi TS errors
+## Verify TS errors
 
 ```bash
 $ npx tsc --noEmit 
