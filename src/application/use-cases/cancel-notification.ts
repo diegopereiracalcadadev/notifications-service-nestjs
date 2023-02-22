@@ -1,7 +1,5 @@
 import { NotificationsRepository } from '@app/repositories/notifications-repository';
-import { Injectable } from '@nestjs/common';
-import { NotificationNotFound } from './errors/notification-not-found';
-import { OperationAlreadyExecuted } from './errors/operation-already-executed';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 
 interface CancelNotificationRequest {
   notificationId: string;
@@ -21,7 +19,14 @@ export class CancelNotification {
     const notification = await this.notificationsRepo.findById(notificationId);
 
     if (!notification) {
-      throw new NotificationNotFound();
+      throw new HttpException('Notification not found', HttpStatus.NOT_FOUND);
+    }
+
+    if (notification.canceledAt) {
+      throw new HttpException(
+        'Operation already executed',
+        HttpStatus.PRECONDITION_FAILED,
+      );
     }
 
     notification.cancel();
