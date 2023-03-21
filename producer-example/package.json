@@ -1,0 +1,15 @@
+{
+  "name": "producer-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "producer.js",
+  "type": "module",
+  "scripts": {
+    "send-msg": "node producer.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "kafkajs": "^2.2.4"
+  }
+}

@@ -5,6 +5,9 @@ import { EventPattern } from '@nestjs/microservices';
 export class NotificationsController {
   @EventPattern('notifications.send-notification')
   async handleSendNotification() {
-    console.log('message received!!');
+    console.log(
+      '############### message received!! ###################',
+      new Date(),
+    );
   }
 }

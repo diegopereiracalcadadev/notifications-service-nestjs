@@ -46,6 +46,15 @@ username: Y2VudHJhbC10ZXJtaXRlLTEyMDc3JHFgoM8SK7yUsCJ-B88YnCREpIwWjEr24Hw <br/>
 password: ****** <br/>
 ssl: true
 
+## Kafka Producer Example 
+
+```bash
+$ cd producer-example
+$ npm i
+$ npm run send-msg 
+```
+
+
 ## Test
 
 ```bash
