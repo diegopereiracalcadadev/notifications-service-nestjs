@@ -38,6 +38,14 @@ $ npx prisma migrate dev
 $ npx prisma studio 
 ```
 
+## Kafka Service Configuration (by Upstash.com)
+
+broker: central-termite-12077-us1-kafka.upstash.io:9092 <br/>
+mechanism: scram-sha-256 <br/>
+username: Y2VudHJhbC10ZXJtaXRlLTEyMDc3JHFgoM8SK7yUsCJ-B88YnCREpIwWjEr24Hw <br/>
+password: ****** <br/>
+ssl: true
+
 ## Test
 
 ```bash
